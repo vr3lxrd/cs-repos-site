@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="/favicon.ico" rel="icon" type="image/x-icon">
+    <link href="/css/style.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap" rel="stylesheet">
+    <title> Respositórios! </title>
+</head>
+    <body>
+        <main>
+            <div>
+                <header>
+                    <h1>Repositórios e Sites da IEEE UFABC CS</h1>
+                    <img src="cslogo.png">
+                </header>
+                <div id="cardsDiv">
+                    <div class="uniqueDiv" id="repositorioDiv">
+                        <h2>Repositórios</h2>
+                        <div class="intraCardsDiv">
+                            <% for( let i = 0; i < repos.length; i++ ) { %>
+                                    <a class="repoCard" href="<%= repos[i].url %>" target="blank">
+                                        <h3 class="repoName"><%= repos[i].name %></h3>
+                                        <p class="repoDesc"><%= repos[i].description %></p>
+                                        <span class="repoLang"><%= repos[i].principal_lang %></span>
+                                    </a> 
+                            <% } %>
+                        </div>
+                    </div>          
+                    <div class="uniqueDiv" id="sitesDiv">
+                        <h2>Sites</h2>
+                        <div class="intraCardsDiv">
+                        <% for( let i = 0; i < repos.length; i++ ) { %>
+                            <% if (repos[i].page != null) { %>
+                                <a class="repoCard" href="<%= repos[i].page %>" target="blank">
+                                    <h3 class="repoName"><%= repos[i].name %></h3>
+                                    <p class="repoDesc"><%= repos[i].description %></p>
+                                    <span class="repoLang">Visite o site do projeto!</span>
+                                </a>
+                            <% } %>             
+                        <% } %>
+                        </div>
+                    </div>
+                </div>
+                <footer>
+                    <div class="item">
+                        <a href="#">Facebook</a>
+                        <span>-</span>
+                        <a href="#">Instagram</a>
+                        <span>-</span>
+                        <a href="#">Discord</a>
+                    </div>
+                    <span id="apiText"class="item">Este site utiliza uma API do github para geração do conteúdo</span>
+                    <a id="ieeeName" class="item">IEEE UFABC CS - 2021</a>
+                </footer>
+            </div>
+        </main>
+    </body>
+</html>  

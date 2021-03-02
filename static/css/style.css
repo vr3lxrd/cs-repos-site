@@ -1,0 +1,152 @@
+*{
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    overflow-x: hidden;
+}
+header{
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #FAFAFA;
+}
+footer{
+    background-color: #FAFAFA;
+    display: flex;
+    flex-direction: row;
+    flex-grow: 1;
+}
+.item{
+    flex: 1;
+    padding: 10px;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 25px;
+    color: #383435;
+}
+.item a{
+    color: #383435;
+}
+.item a:hover{
+    cursor: pointer;
+    color: #1a1a1a;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+#apiText{
+    align-self: center;
+    text-align-last: center;
+}
+#ieeeName{
+    align-self: center;
+    text-align-last: end;
+}
+h1{
+    font-weight: bold;
+    font-size: 48px;
+    color: #383435;
+    margin-bottom: 0;
+    text-align: center;
+    margin: 40px 15px 0px 15px
+}
+h2{
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 49px;
+    color: #383435;
+    padding: 20px 0px 0px 0px;  
+}
+header img{
+    padding-top: 25px;
+    padding-bottom: 60px;
+}
+@media (max-width: 540px)
+{
+  header img{
+    width: 300px;
+  }
+  footer{
+      flex-direction: column;
+      align-items: center;
+      padding: 10px
+  }
+  #ieeeName{
+    align-self: center;
+    text-align-last: center;
+    text-align: center;
+    padding: 10px
+    }
+    #apiText{
+    align-self: center;
+    text-align-last: center;
+    text-align: center;
+    padding: 10px
+    }
+    .repoCard{
+        min-width: 80vw !important;
+        max-width: 80vw !important; 
+        height: auto;
+    }
+}   
+
+#cardsDiv{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: #F8F8F8;
+    border-bottom: 1px solid #D4D4D4;
+    border-top: 1px solid #D4D4D4;
+    padding-bottom: 40px;
+}
+.uniqueDiv{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.intraCardsDiv{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.repoCard{
+    display: flex;
+    flex-direction: column;
+    background: #FFFFFF;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.12);
+    transition: box-shadow 0.2s ease 0s;
+    border-radius: 10px;
+    max-width: 400px;
+    min-width: 400px;
+    padding: 20px;
+    margin: 25px;
+}
+.repoCard:hover{
+    box-shadow: rgb(0 0 0 / 12%) 0px 10px 30px;
+
+}
+.repoName{
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 25px;
+    color: #383435;
+}
+.repoDesc{
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 19px;
+    color: #383435;
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+.repoLang{
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 22px;
+    color: #222222;
+}

@@ -2,7 +2,7 @@ const express = require('express')
 const app = express()
 const { Octokit } = require("@octokit/rest");
 const octokit = new Octokit({
-  auth: 'd10b1e0c458b25bf2fdbe8c1bfc6d3c833591ab7'
+  auth: process.env.AUTH
 })
 
 app.set('view engine', 'ejs')
